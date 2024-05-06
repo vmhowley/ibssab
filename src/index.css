@@ -1,0 +1,19 @@
+@import url('https://use.typekit.net/kgb2xur.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+
+body{
+    background: #202326;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 300;    
+    user-select: none;
+}
+
+
+

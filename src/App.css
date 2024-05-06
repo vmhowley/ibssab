@@ -1,0 +1,221 @@
+
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 16px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 16px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 16px;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+}
+
+.card1 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+.card01 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.icon1 {
+  color: #cc39a4;
+}
+
+.card2 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+.card02 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.icon2 {
+  color: #03A9F4;
+}
+
+.card3 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+.card03 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.icon3 {
+color: rgb(79, 138, 79);
+}
+
+.card4 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+.card04 {
+  width: 200px;
+  height: 200px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.icon4 {
+  color: rgb(174, 62, 62);
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #3C4248;
+}
+.card01:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #3C4248;
+}
+
+.card01:hover .icon1 {
+  color: white;
+}
+.card1:hover .icon1 {
+  color: white;
+}
+
+.card02:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #3C4248;
+}
+
+.card02:hover .icon2 {
+  color: white;
+}
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #3C4248;
+}
+
+.card2:hover .twitter {
+  color: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.card3:hover .icon3 {
+  color: white;
+}
+.card03:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(79, 138, 79);
+}
+
+.card03:hover .icon3 {
+  color: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.card4:hover .icon4 {
+  color: white;
+}
+.card04:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: rgb(174, 62, 62);;
+}
+
+.card04:hover .icon4 {
+  color: white;
+}
