@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useAuth } from '../components/AuthProvider'
 import { motion } from 'framer-motion'
-
 import Logo from '../assets/images/logo1.png'
 function Login () {
   const [input, setInput] = useState({

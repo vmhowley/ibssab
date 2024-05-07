@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../components/AuthProvider'
 
 export const BarSide = () => {
+  const tab = location.pathname
   const auth = useAuth()
+  console.log(tab)
   return (
     <div className='fixed pt-6 inset-y-0 flex-wrap items-center block w-[240px] overflow-y-auto antialiased transition-transform duration-500 -translate-x-full  shadow-sm dark:bg-neutral-800 my-14 ease-nav-brand -z-1 xl:ml-8 rounded-2xl xl:left-0 xl:translate-x-0 ps z-auto'>
       <aside>
@@ -25,24 +27,24 @@ export const BarSide = () => {
                 </p>
             </div>
         </div>
-          <ul className='grid text-white tracking-wide transition-all duration-300  hover:gap-6 gap-3 justify-center'>
+          <ul className='grid text-white tracking-wide transition-all duration-300  hover:gap-6 gap-6 justify-center'>
             <Link to={'/'}>
-            <li className=' rounded-tl-2xl rounded-tr-2xl  p-2 flex w-48  h-14 items-center  gap-1 hover:scale-110 transition-all duration-500 hover:bg-[#993333]/50'>
+            <li className={`rounded-full  p-2 flex w-48  h-12 items-center  gap-1 hover:scale-110 transition-all duration-500  ${tab !== '/' ? 'hover:bg-[#993333]/50' : 'bg-[#993333]/50'}`}>
               <SquaresFour size={32} weight="fill" />Dashboard
             </li>
             </Link>
             <Link to={'/payment'}>
-            <li className='rounded   flex  items-center w-48 h-14 p-2 gap-1 hover:scale-110 transition-all duration-500 hover:bg-[#993333]/50 '>
+            <li className={`rounded-full  p-2 flex w-48  h-12 items-center  gap-1 hover:scale-110 transition-all duration-500  ${tab !== '/payment' && tab !== '/tc_payment' ? 'hover:bg-[#993333]/50' : 'bg-[#993333]/50'}`}>
               <Handbag size={32} weight="fill" />Transacciones
             </li>
             </Link>
             <Link to={'/reverse'}>
-            <li className='rounded    flex w-48 h-14 items-center gap-1 p-2 hover:scale-110 transition-all duration-500 hover:bg-[#993333]/50'>
+            <li className={`rounded-full  p-2 flex w-48  h-12 items-center  gap-1 hover:scale-110 transition-all duration-500  ${tab !== '/reverse' && tab !== '/tc_reverse' ? 'hover:bg-[#993333]/50' : 'bg-[#993333]/50'}`}>
               <Scroll size={32} weight="fill" />Reversos
             </li>
             </Link>
             <Link to={'/'}>
-            <li className='rounded-bl-2xl rounded-br-2xl    flex p-2 w-48 h-14 items-center gap-1 hover:scale-110 transition-all duration-500 hover:bg-[#993333]/50'>
+            <li className={`rounded-full  p-2 flex w-48  h-12 items-center  gap-1 hover:scale-110 transition-all duration-500  ${tab !== '/consu' ? 'hover:bg-[#993333]/50' : 'bg-[#993333]/50'}`}>
               <Scroll size={32} weight="fill" />Consulta de balance
             </li>
             </Link>
