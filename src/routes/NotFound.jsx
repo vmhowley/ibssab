@@ -7,6 +7,7 @@ const NotFound = () => {
   console.log(location.pathname)
   console.log()
   return (
+    <>
     <Empty className='relative -top-14 pr-20'>
       <Empty>
         <img
@@ -14,14 +15,14 @@ const NotFound = () => {
           height={234}
           width={350}
           alt="404"
-        />
+          />
       </Empty>
       <Empty.Title>Oops! Al parecer estas perdido</Empty.Title>
       <Empty.Description>
         La Ruta a la que intenta acceder no existe.
       </Empty.Description>
-      <Empty.Redirect buttonText="Volver" redirectUrl="/" />
     </Empty>
+          </>
   )
 }
 export default NotFound
