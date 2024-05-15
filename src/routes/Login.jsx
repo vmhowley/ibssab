@@ -30,7 +30,7 @@ function Login () {
     initial={{ opacity: 0 }}
     animate={{ opacity: 2 }}
     exit={{ opacity: 0 }}
-     className="fixed top-0 left-0 w-screen flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 dark:bg-[#202326] z-50">
+     className="fixed top-0 xl:-left-80 w-screen flex h-screen flex-1 flex-col justify-center  dark:bg-[#202326] bg-white z-50">
         <div className="sm:mx-auto sm:w-full pb-10 sm:max-w-sm">
           <img
             className="mx-auto h-14 w-auto"

@@ -112,15 +112,14 @@ function PagoTc (props) {
         <form
         id='formu'
           onSubmit={handleSubmit}
-          className=' border-x-4 w-[600px] shadow  p-10 rounded-xl dark:text-white'
+          className=' flex flex-col relative rounded-xl dark:text-white  p-5 shadow-md '
         >
-          {Object.keys(errors).length === 0 && submit ? '' : ''}
-          <div className='sm:grid sm:grid-cols-2 grid grid-flow-cols gap-x-6 gap-y-8 text-sm  items-center'>
-            <div className='sm:col-span-3'>
+          <div className=' sm:grid-cols-1 grid grid-flow-cols gap-x-6 gap-y-6 text-sm  items-center'>
+            <div className='sm:col-span-1'>
               <div className='pb-2'>
                 <h1 className='font-bold text-xl'>Pago de tarjeta</h1>
               </div>
-              <div className='mt-2 '>
+              <div className='mt-2 grid gap-2 sm:col-span-2'>
                 <label htmlFor='tcact' className='font-semibold'>
                   Numero de Tarjeta
                 </label>
@@ -133,7 +132,7 @@ function PagoTc (props) {
                   id='tcact'
                   placeholder='xxxx xxxx xxxx xxxx'
                   autoComplete='tcact'
-                  className='block w-full rounded-md ring-1 ring-blue-600 focus:ring-2 focus:ring-blue-600  py-1.5 text-slate-600  shadow-sm  placeholder:text-gray-500 font-bold  sm:text-sm sm:leading-6 ps-3'
+                  className='block w-96 rounded-md border-0 ring-1 py-2   shadow-sm placeholder:dark:text-white dark:bg-white/5 font-bold   sm:text-sm sm:leading-6 ps-3'
                 />
               </div>
               <p className='text-red-500 transition ease-in-out delay-100  hover:translate-x-5 hover:scale-110 duration-300'>
@@ -141,7 +140,7 @@ function PagoTc (props) {
               </p>
             </div>
             <div className='sm:col-span-3'>
-              <div className='mt-2'>
+              <div className='mt-2 grid gap-2'>
                 <label htmlFor='Moneda' className='font-semibold'>
                   Moneda
                 </label>
@@ -150,7 +149,7 @@ function PagoTc (props) {
                   id='moneda'
                   value={data.moneda ?? ''}
                   onChange={handleChange}
-                  className='block w-full rounded-md aria-checked:bg-red-700 border-0 py-2 text-slate-600  shadow-sm   placeholder:text-gray-500 font-bold   sm:text-sm sm:leading-6 ps-2 '
+                  className='block w-96 rounded-md aria-checked:bg-red-700 border-0 py-2  shadow-sm   placeholder:dark:text-white dark:bg-white/5 font-bold   sm:text-sm sm:leading-6 ps-2 '
                 >
                   <option value={214}>DOP</option>
                   <option value={840}>USD</option>
@@ -158,7 +157,7 @@ function PagoTc (props) {
               </div>
             </div>
             <div className='sm:col-span-3'>
-              <div className='mt-2 col-start-2'>
+              <div className='mt-2 grid gap-2 col-start-2'>
                 <label htmlFor='monto' className='font-semibold'>
                   Monto
                 </label>
@@ -175,7 +174,7 @@ function PagoTc (props) {
                   name='monto'
                   type='text'
                   autoComplete='monto'
-                  className='block w-full rounded-md border-0 py-1.5 text-slate-600  shadow-sm  placeholder:text-gray-500 font-bold  sm:text-sm sm:leading-6 ps-3'
+                  className='block w-96 rounded-md border-0 py-1.5  shadow-sm  placeholder:dark:text-white dark:bg-white/5 font-bold  sm:text-sm sm:leading-6 ps-3'
                 />
               </div>
               <p className='text-red-500'>{errors.monto}</p>
@@ -186,7 +185,7 @@ function PagoTc (props) {
               }`}
             >
               <div className=' grid col-span-2 '>
-                <div className='mt-2'>
+                <div className='mt-2 grid gap-2'>
                   <label htmlFor='forma_pago' className='font-semibold'>
                     Forma de pago
                   </label>
@@ -195,7 +194,7 @@ function PagoTc (props) {
                     id='forma_pago'
                     value={data.forma_pago ?? '2'}
                     onChange={handleChange}
-                    className='block w-full rounded-md border-0 py-2 text-slate-600  shadow-sm  placeholder:text-gray-500 font-bold sm:text-sm sm:leading-6 ps-2'
+                    className='block w-96 rounded-md border-0 py-2   shadow-sm  placeholder:dark:text-white dark:bg-white/5 font-bold sm:text-sm sm:leading-6 ps-2'
                   >
                     <option value={1}>Efectivo</option>
                     <option value={2}>Cheque</option>
@@ -208,7 +207,7 @@ function PagoTc (props) {
                 data.forma_pago === '2' && tab === '/tc_payment' ? 'show ' : 'hidden'
               }`}
             >
-              <div className='mt-2'>
+              <div className='mt-2 grid gap-2'>
                 <label htmlFor='numero_ck' className='font-semibold'>
                   Numero de cheque
                 </label>
@@ -219,7 +218,7 @@ function PagoTc (props) {
                   name='numero_ck'
                   id='numero_ck'
                   autoComplete='numero-numero_ck'
-                  className='block w-full rounded-md border-0 py-1.5 text-slate-600  shadow-sm placeholder:text-gray-500 font-bold   sm:text-sm sm:leading-6 ps-3'
+                  className='block w-96 rounded-md border-0 py-1.5 shadow-sm placeholder:dark:text-white dark:bg-white/5 font-bold   sm:text-sm sm:leading-6 ps-3'
                 />
               </div>
               <p className='text-red-500'>{errors.numero_ck}</p>
@@ -227,7 +226,7 @@ function PagoTc (props) {
             <div
               className={`col-span-3  ${tab === '/tc_reverse' ? 'show' : 'hidden'}`}
             >
-              <div className='mt-2'>
+              <div className='mt-2 grid gap-2'>
                 <label htmlFor='autorizacion' className='font-semibold'>
                   Numero de autorización
                 </label>
@@ -238,7 +237,7 @@ function PagoTc (props) {
                   name='autorizacion'
                   id='autorizacion'
                   autoComplete='autorizacion'
-                  className='block w-full rounded-md border-0 py-1.5 text-slate-600  shadow-sm  placeholder:text-gray-500 font-bold  sm:text-sm sm:leading-6 ps-3'
+                  className='block w-96 rounded-md border-0 py-1.5 text-slate-600  shadow-sm  placeholder:dark:text-white dark:bg-white/5 font-bold  sm:text-sm sm:leading-6 ps-3'
                 />
               </div>
               <p className='text-red-500'>{errors.autorizacion}</p>
@@ -249,13 +248,13 @@ function PagoTc (props) {
             <button
               type='submit'
               value='submit'
-              className='h-10 font-semibold rounded-xl p-4 flex items-center dark:bg-blue-600'
+              className='h-10 font-semibold rounded-xl p-4 flex items-center dark:bg-zinc-600 hover:bg-green-700'
             >
-              {tab === '/tc_reverse' ? 'Reversar' : 'Pagar 💳'}
+              {tab === '/tc_reverse' ? 'Reversar' : 'Pagar'}
             </button>
-          </div>
           <div className={`fixed bottom-32 bg-yellow-400/20 font-bold  opacity-15 hover:opacity-100 transition-opacity duration-300 ml-52  w-max p-2 rounded-lg  ${location.pathname === '/tc_reverse' ? 'hidden' : 'show'}`}>
             <button onClick={handleReverse}>Reversar 🔁</button>
+          </div>
           </div>
         </form>
       </motion.div>

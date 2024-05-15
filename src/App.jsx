@@ -24,10 +24,8 @@ function App (isVisible) {
 
             <BarSide/>
           <RecentActivity />
-        {isVisible && (
-          <div className='dark:dark:bg-neutral-800 rounded-xl place-content-center xl:p-10 flex-wrap items-center block fixed  sm:inset-x-0 sm:inset-y-0 sm:mx-80 sm:my-14'>
+          <div className='dark:bg-zinc-900 bg-white drop-shadow-xl dark:shadow-white/5 dark:shadow-xl rounded-xl place-content-center xl:p-10 flex-wrap items-center block fixed  inset-x-0 inset-y-0 sm:mx-9 xl:mx-80 my-14 '>
           <Routes location={location} key={location.path}>
-          <Route path='/login' element={<Login/>} />
           <Route element={<PrivateRoutes />}>
           <Route path='/' element={<Home/>} />
           <Route path='/payment' element={<Pagos/>} />
@@ -38,9 +36,9 @@ function App (isVisible) {
           <Route path='/pucharse_withdrawal' element={<CompraRetiro/>} />
           <Route path='*' element={<Notfound/>} />
           </Route>
+            <Route path='/login' element={<Login/>} />
         </Routes>
           </div>
-        )}
         </AuthProvider>
       </Router>
         </AnimatePresence>

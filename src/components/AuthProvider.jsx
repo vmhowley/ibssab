@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'
 const AuthContext = createContext()
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(sessionStorage.getItem('usr') || '')
+  const [user, setUser] = useState(null)
   const [token, setToken] = useState(sessionStorage.getItem('site') || '')
   const navigate = useNavigate()
   const loginAction = async (data) => {
@@ -24,10 +24,8 @@ const AuthProvider = ({ children }) => {
         { timeout: 5000 },
         headers)
       if (response.data.success === true) {
-        setUser(response.data.userid)
-        setToken('K52D4CC5X4R66X55V5D552XC')
+        setToken(response.data.token)
         sessionStorage.setItem('site', response.data.token)
-        sessionStorage.setItem('usr', response.data.userid)
         navigate('/')
         return
       }
@@ -52,7 +50,6 @@ const AuthProvider = ({ children }) => {
     setUser(null)
     setToken('')
     sessionStorage.removeItem('site')
-    sessionStorage.removeItem('usr')
     navigate('/login')
   }
 

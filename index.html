@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark" >
+<html lang="en"  >
 
 <head>
   <meta charset="UTF-8" />
@@ -22,10 +22,17 @@
     </style>
 </head>
 
-<body class="dark:bg-neutral-900">
+<body class="dark:bg-black bg-white   ">
   <div id="root"></div>
   
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const mode = localStorage.getItem('dark');
+    if (mode) {
+      document.body.classList.toggle('dark')
+    } 
+  </script>
+  
 </body>
 
 </html>

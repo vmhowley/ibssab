@@ -1,4 +1,7 @@
 
+body {
+  user-select: none;
+}
 
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -50,8 +53,7 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 90px 5px 5px 90px;
+@apply bg-zinc-600;  border-radius: 90px 5px 5px 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
@@ -60,14 +62,13 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+@apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon1 {
-  color: #cc39a4;
+  @apply text-white;
 }
 
 .card2 {
@@ -75,8 +76,8 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 5px 90px 90px 5px;
+@apply bg-zinc-600;  
+border-radius: 5px 90px 90px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
@@ -85,14 +86,13 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+@apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon2 {
-  color: #03A9F4;
+  @apply text-white;
 }
 
 .card3 {
@@ -100,8 +100,7 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 5px 5px 5px 90px;
+@apply bg-zinc-600;  border-radius: 5px 5px 5px 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
@@ -110,14 +109,14 @@ input::-webkit-inner-spin-button {
   height: 200px;
   outline: none;
   border: none;
-  background: white;
+  @apply bg-zinc-600;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon3 {
-color: rgb(79, 138, 79);
+  @apply text-white;
 }
 
 .card4 {
@@ -125,8 +124,7 @@ color: rgb(79, 138, 79);
   height: 200px;
   outline: none;
   border: none;
-  background: white;
-  border-radius: 5px 5px 90px 5px;
+@apply bg-zinc-600;  border-radius: 5px 5px 90px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
@@ -135,14 +133,14 @@ color: rgb(79, 138, 79);
   height: 200px;
   outline: none;
   border: none;
-  background: white;
+  @apply bg-zinc-600;
   border-radius: 5px 5px 5px 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon4 {
-  color: rgb(174, 62, 62);
+  @apply text-white;
 }
 
 .card1:hover {
@@ -153,7 +151,7 @@ color: rgb(79, 138, 79);
 .card01:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #3C4248;
+  background-color: rgb(79, 138, 79);
 }
 
 .card01:hover .icon1 {
@@ -166,7 +164,7 @@ color: rgb(79, 138, 79);
 .card02:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #3C4248;
+  background-color: rgb(79, 138, 79);
 }
 
 .card02:hover .icon2 {

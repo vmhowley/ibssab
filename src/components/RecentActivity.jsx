@@ -2,7 +2,7 @@ import React from 'react'
 import { ChartLineDown, ChartLineUp } from '@phosphor-icons/react'
 function RecentActivity () {
   return (
-    <div className='fixed pt-8 inset-y-0 flex-wrap items-center p-1 block overflow-y-auto antialiased transition-transform duration-200 translate-x-full right-0  shadow-sm ease-nav-brand -z-1 xl:mr-8 rounded-2xl dark:bg-neutral-800 dark:text-white my-14 xl:translate-x-0 ps w-[270px] '>
+    <div className='fixed pt-8 inset-y-0 flex-wrap items-center p-1 block overflow-y-auto antialiased transition-transform duration-200 translate-x-full right-0  drop-shadow-xl ease-nav-brand -z-1 xl:mr-8 rounded-2xl dark:bg-zinc-900 dark:shadow-white/5 dark:shadow-xl bg-white dark:text-white my-14 xl:translate-x-0 ps w-[270px] '>
       <aside className='grid'>
         <div className='grid place-content-center p-1 pt-8 pb-10'>
           <h1 className='font-bold text-xl'>Actividad Reciente</h1>
