@@ -28,7 +28,7 @@
   <script type="module" src="/src/main.jsx"></script>
   <script>
     const mode = localStorage.getItem('dark');
-    if (mode) {
+    if (mode == 'true') {
       document.body.classList.toggle('dark')
     } 
   </script>

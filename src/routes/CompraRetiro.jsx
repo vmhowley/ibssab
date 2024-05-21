@@ -82,22 +82,6 @@ function CompraRetiro () {
         onSubmit={handleSubmit}
           className="w-max h-max border  shadow dark:bg-[#333b44] p-10 rounded-md "
         >
-          <div className='flex justify-center'>
-          <div className="flex  h-11 font-semibold border shadow-sm w-max rounded-xl bg-white ">
-            <div type="button" onClick={(e) => setTab('compra')} className={`rounded-l-xl w-max p-2 cursor-pointer flex justify-center items-center hover:text-red-600 ${tab === 'compra' ? 'bg-red-100/50  text-red-500/90' : ''}`}>
-              Compra
-            </div>
-            <div onClick={(e) => setTab('retiro')} className={` hover:text-red-600  p-2 w-max cursor-pointer flex justify-center items-center ${tab === 'retiro' ? ' bg-red-100/50  text-red-500/90' : ''} `} >
-              Retiro
-            </div>
-            <div onClick={(e) => setTab('consultab')} className={` hover:text-red-600 p-2  w-max cursor-pointer flex justify-center items-center ${tab === 'consultab' ? ' bg-red-100/50  text-red-500/90' : ''} `} >
-              Consulta balance
-            </div>
-            <div onClick={(e) => setTab('reverso')} className={` hover:text-red-600 p-2 rounded-r-xl w-max cursor-pointer flex justify-center items-center ${tab === 'reverso' ? ' bg-red-100/50  text-red-500/90' : ''} `} >
-              Reverso
-            </div>
-          </div>
-          </div>
           {Object.keys(errors).length === 0 && submit ? 'Formulario enviado' : '' }
           <div className="mt-10 sm:grid sm:grid-cols-2 grid grid-flow-cols gap-x-6 gap-y-8 text-sm text-slate-600 ">
             <div className="sm:col-span-1">

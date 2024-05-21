@@ -4,7 +4,7 @@ import './App.css'
 import Home from './routes/Home'
 import { BarSide } from './components/BarSide'
 import Notfound from './routes/NotFound.jsx'
-import CompraRetiro from './routes/CompraRetiro.jsx'
+import CompraRetiro from './components/CompraRetiro.jsx'
 import PrivateRoutes from './routes/PrivateRoutes.jsx'
 import { AnimatePresence } from 'framer-motion'
 import RecentActivity from './components/RecentActivity.jsx'
@@ -24,16 +24,16 @@ function App (isVisible) {
 
             <BarSide/>
           <RecentActivity />
-          <div className='dark:bg-zinc-900 bg-white drop-shadow-xl dark:shadow-white/5 dark:shadow-xl rounded-xl place-content-center xl:p-10 flex-wrap items-center block fixed  inset-x-0 inset-y-0 sm:mx-9 xl:mx-80 my-14 '>
+          <div className='grid place-content-center place-items-center h-screen '>
           <Routes location={location} key={location.path}>
           <Route element={<PrivateRoutes />}>
           <Route path='/' element={<Home/>} />
           <Route path='/payment' element={<Pagos/>} />
+          <Route path='/buy' element={<CompraRetiro/>} />
           <Route path='/reverse' element={<Reversos/>} />
           <Route path='/tc_payment' element={<PagosTc/>} />
           <Route path='/tc_reverse' element={<ReversoTc/>} />
           <Route path='/shopping' element={<Transacciones />} />
-          <Route path='/pucharse_withdrawal' element={<CompraRetiro/>} />
           <Route path='*' element={<Notfound/>} />
           </Route>
             <Route path='/login' element={<Login/>} />

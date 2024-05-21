@@ -15,6 +15,9 @@ function Pagos (props) {
     className='flex justify-center items-center h-full'>
      <SquareButtons class1='card01'
                     button1='/tc_payment'
+                    button2='/loan_payment'
+                    button3='/buy'
+                    button4='/withdraw'
                     class2='card02'
                     class3='card03'
                     class4='card04'

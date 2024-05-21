@@ -8,7 +8,7 @@ function PagoTc (props) {
   const auth = useAuth()
   const [open, setOpen] = useState(false)
   const [send, setSend] = useState(false)
-  const [tab, setTab] = useState(location.pathname)
+  const tab = location.pathname
   const [errors, setErrors] = useState({})
   const [submit, setSubmit] = useState(false)
 
@@ -107,14 +107,14 @@ function PagoTc (props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 2 }}
         exit={{ opacity: 0 }}
-        className='grid xl:h-full w-full justify-center'
+        className='bg-zinc-800 rounded-xl dark:text-white  shadow-md '
       >
         <form
         id='formu'
           onSubmit={handleSubmit}
-          className=' flex flex-col relative rounded-xl dark:text-white  p-5 shadow-md '
+          className='flex p-5 py-16'
         >
-          <div className=' sm:grid-cols-1 grid grid-flow-cols gap-x-6 gap-y-6 text-sm  items-center'>
+          <div className='grid  gap-y-5 text-sm justify-center  '>
             <div className='sm:col-span-1'>
               <div className='pb-2'>
                 <h1 className='font-bold text-xl'>Pago de tarjeta</h1>
@@ -242,20 +242,21 @@ function PagoTc (props) {
               </div>
               <p className='text-red-500'>{errors.autorizacion}</p>
             </div>
-          </div>
-          <div className='w-full flex justify-center pt-6'></div>{' '}
-          <div className='w-full flex justify-center'>
+            <div className='grid justify-center gap-2  pt-5'>
             <button
               type='submit'
               value='submit'
-              className='h-10 font-semibold rounded-xl p-4 flex items-center dark:bg-zinc-600 hover:bg-green-700'
+              className='h-10 w-96 font-semibold rounded-xl p-4 place-content-center grid dark:bg-zinc-600 hover:bg-green-700'
             >
               {tab === '/tc_reverse' ? 'Reversar' : 'Pagar'}
             </button>
-          <div className={`fixed bottom-32 bg-yellow-400/20 font-bold  opacity-15 hover:opacity-100 transition-opacity duration-300 ml-52  w-max p-2 rounded-lg  ${location.pathname === '/tc_reverse' ? 'hidden' : 'show'}`}>
-            <button onClick={handleReverse}>Reversar 🔁</button>
+            <button 
+            onClick={handleReverse}
+            className='h-10 font-semibold rounded-xl p-4 place-content-center grid dark:bg-zinc-600 hover:bg-yellow-700'
+            >Reversar 🔁</button>
           </div>
           </div>
+          
         </form>
       </motion.div>
     </>

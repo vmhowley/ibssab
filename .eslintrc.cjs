@@ -4,7 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard',
+    'eslint:recommended',
     'plugin:react/recommended'
   ],
   overrides: [
@@ -13,7 +13,7 @@ module.exports = {
         node: true
       },
       files: [
-        '.eslintrc.{js,cjs}'
+        '.eslintrc.{jsx,cjs,js}'
       ],
       parserOptions: {
         sourceType: 'script'
@@ -28,5 +28,7 @@ module.exports = {
     'react'
   ],
   rules: {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
   }
 }

@@ -49,8 +49,8 @@ input::-webkit-inner-spin-button {
 }
 
 .card1 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  border-radius: 90px 5px 5px 90px;
@@ -58,8 +58,8 @@ input::-webkit-inner-spin-button {
   transition: .2s ease-in-out;
 }
 .card01 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
@@ -72,8 +72,8 @@ input::-webkit-inner-spin-button {
 }
 
 .card2 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  
@@ -82,8 +82,8 @@ border-radius: 5px 90px 90px 5px;
   transition: .2s ease-in-out;
 }
 .card02 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
@@ -96,8 +96,8 @@ border-radius: 5px 90px 90px 5px;
 }
 
 .card3 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  border-radius: 5px 5px 5px 90px;
@@ -105,8 +105,8 @@ border-radius: 5px 90px 90px 5px;
   transition: .2s ease-in-out;
 }
 .card03 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
   @apply bg-zinc-600;
@@ -120,8 +120,8 @@ border-radius: 5px 90px 90px 5px;
 }
 
 .card4 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
 @apply bg-zinc-600;  border-radius: 5px 5px 90px 5px;
@@ -129,8 +129,8 @@ border-radius: 5px 90px 90px 5px;
   transition: .2s ease-in-out;
 }
 .card04 {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   outline: none;
   border: none;
   @apply bg-zinc-600;

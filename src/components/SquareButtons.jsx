@@ -6,10 +6,10 @@ function SquareButtons (props) {
 <div className="main hover:scale-95 transition-all duration-400  ">
   <div className="up justify-center ">
     <Link to={props.button1}>
-    <button className={`${props.class1 ? 'show' : 'hidden'} grid ${props.class1} place-content-center hover:scale-125 transition-all duration-200 `}>
+    <button className={`${props.class1 ? 'show' : 'hidden'} grid ${props.class1} place-content-center hover:scale-100 transition-all duration-200 `}>
     <div
-        width="30px"
-        height="30px"
+        width="20px"
+        height="20px"
         className="icon1  justify-center flex"
         >
         {props.icon1}
@@ -19,6 +19,7 @@ function SquareButtons (props) {
               </p>
       </button>
         </Link>
+        <Link to={props.button2}>
     <button className={`${props.class2 ? 'show ' : 'hidden '} grid ${props.class2} place-content-center hover:scale-125 transition-all duration-200 `}>
       <div
         width="30px"
@@ -31,9 +32,10 @@ function SquareButtons (props) {
         {props.name2}
               </p>
     </button>
+</Link>
   </div>
-
   <div className="down justify-center">
+  <Link to={props.button3}>
     <button className={`${props.class3 ? 'show' : 'hidden'} grid ${props.class3} place-content-center hover:scale-125 transition-all duration-200 `}>
     <div
         width="30px"
@@ -45,6 +47,9 @@ function SquareButtons (props) {
               <p className='icon3 font-semibold w-28' >
         {props.name3}
               </p>    </button>
+    </Link>
+    <Link to={props.button4}>
+
     <button className={`${props.class4 ? 'show' : 'hidden'} grid ${props.class4} place-content-center hover:scale-125 transition-all duration-200 `}>
     <div
         width="30px"
@@ -56,6 +61,7 @@ function SquareButtons (props) {
               <p className='icon4 font-semibold w-28' >
         {props.name4}
               </p>    </button>
+</Link>
   </div>
 </div>
 
