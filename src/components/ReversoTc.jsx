@@ -14,7 +14,7 @@ function ReversoTc (props) {
 
   const [data, setData] = useState({
     tipo_trans: 'Reversotc',
-    cod_afiliado: 1,
+    cod_afiliado: '1',
     tcact: '',
     moneda: '214',
     cvv2: '0',

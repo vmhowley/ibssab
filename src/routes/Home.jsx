@@ -1,15 +1,14 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import RecentActivity from '../components/RecentActivity'
-import Invoice from '../components/Invoice'
-function Home () {
+
+function Home() {
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    className='flex '>
-    </motion.div>
+    <>
+    <div className='fixed w-screen bg-white h-screen'>
+    h1
+    <button>Iniciar session</button>
+    </div>
+    </>
+    
   )
 }
 

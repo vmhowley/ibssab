@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import SquareButtons from '../components/SquareButtons'
 import {
   CreditCard,
-  Scroll
+  Scroll,
+  ShoppingCartSimple
 } from '@phosphor-icons/react'
 
 function Pagos (props) {
@@ -25,10 +26,10 @@ function Pagos (props) {
                     name2='Pago Prestamos'
                     name3='Compras'
                     name4='Retiros'
-                    icon1={<CreditCard size={50} />}
-                    icon2={<Scroll size={50} />}
-                    icon3={<CreditCard size={50} />}
-                    icon4={<Scroll size={50} />}/>
+                    icon1={<CreditCard size={100} />}
+                    icon2={<Scroll size={100} />}
+                    icon3={<ShoppingCartSimple size={100} />                  }
+                    icon4={<Scroll size={100} />}/>
         </motion.div>
   )
 }

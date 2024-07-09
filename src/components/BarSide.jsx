@@ -17,55 +17,74 @@ export const BarSide = () => {
     {
       name: 'Dashboard',
       link: '/',
-      icon: <MdDashboard size={24} weight="fill" />
+      icon: <MdDashboard size={22} weight="fill" />
     },
     {
       name: 'Transacciones',
       link: '/payment',
-      icon: <HandCoins size={24} weight="fill" />
+      icon: <HandCoins size={22} weight="fill" />
     },
     {
       name: 'Reversos',
       link: '/reverse',
-      icon: <Scroll size={24} weight="fill" />
+      icon: <Scroll size={22} weight="fill" />
     },
     {
       name: 'Consultas',
       link: '',
-      icon: <Handbag size={24} weight="fill" />
+      icon: <Handbag size={22} weight="fill" />
     }
   ]
   const darkModeHandler = () => {
+    const mode = localStorage.getItem('dark')
+    if (mode != 'true') {
+      localStorage.setItem('dark', true)
+    } else {
+      localStorage.removeItem('dark')
+    }
     setDark(!dark)
-    document.body.classList.toggle('dark')
-    localStorage.setItem('dark', !dark)
+    document.body.classList.toggle('dark')  
   }
 
   return (
-    <div className='fixed pt-6 inset-y-0 flex-wrap items-center block w-[260px] overflow-y-auto antialiased transition-transform duration-500 -translate-x-full dark:shadow-white/5 dark:shadow-xl drop-shadow-xl dark:bg-zinc-900 bg-white my-14 ease-nav-brand -z-1 xl:ml-8 rounded-2xl xl:left-0 xl:translate-x-0 ps z-auto'>
-      <aside>
-          <div onClick={() => navi('/')} className='grid cursor-pointer mb-32 mt-10 w-full justify-center saturate-150 h-10 '>
-          <img src={Logo} alt="" className='w-[200px] h-[45px]' />
+    <div className='fixed inset-y-0 flex-wrap items-center block  w-[290px] overflow-y-auto antialiased transition-transform duration-500 -translate-x-full dark:shadow-white/5  my-3 ease-nav-brand -z-1  xl:left-0 xl:translate-x-0 ps z-auto'>
+      <aside className='  '>
+          <div onClick={() => navi('/')} className='grid cursor-pointer  saturate-150  '>
+          <img src={Logo} alt="" className='w-40 h-9' />
+          <hr className="inset-0 dark:border-zinc-500  mt-5" />
         </div>
-          <ul className='grid  dark:text-black tracking-wide transition-all duration-300  hover:gap-6 gap-6 justify-center'>
+          <ul className='grid  text-sm transition-all mt-5 duration-300  gap-2 justify-start w-full'>
             {navigation.map((nav, index) =>
-              <li key={index} >
-                <Link key={index} to={nav.link} className={`rounded-full shadow justify-center  p-2 flex w-44  h-10 items-center  gap-3 hover:scale-110 transition-all duration-500  ${tab !== nav.link ? 'dark:hover:bg-zinc-500 hover:bg-red-200 dark:text-white' : 'dark:bg-zinc-600 bg-red-800/80 text-white shadow-xl border border-black/30'}`}>
-                {nav.icon}{nav.name}
+            <div key={index} className='w-[2px] rounded-lg dark:text-white' >
+              <li className='relative'>
+              <span className={`${tab !== nav.link ? '' : 'absolute inset-y-2 left-0.5 w-0.5 rounded-full bg-red-600 dark:bg-white'}`} ></span>
+                <Link key={index} to={nav.link} className={`relative rounded p-2 ml-5  flex w-64 items-center  transition-all duration-500 hover:bg-red-200 dark:hover:bg-zinc-800`}>
+                <h1 className='flex gap-3 truncate font-semibold'>
+                  <p className={`${tab !== nav.link ? ' ' : '  text-red-600 dark:text-white'}`}>
+                 {nav.icon}
+                  </p>
+                 {nav.name}
+                 </h1>
           </Link>
               </li>
+            </div>
             )}
         </ul>
           <div className='flex justify-center'>
-            <button onClick={e => auth.logOut(e)} className='absolute bottom-4 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl'>LogOut</button>
-            <button onClick={(e) => darkModeHandler(e)} className='absolute bottom-20 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl'>
+            <button onClick={darkModeHandler} className='absolute bottom-20 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl'>
                 {
-                    dark && <IoSunny />
-                }
+                  dark && <IoSunny />
+                  }
                 {
-                    !dark && <IoMoon />
-                }
+                  !dark && <IoMoon />
+                  }
             </button>
+                <button 
+                onClick={(e) => auth.logOut(e)} 
+                className='absolute bottom-4 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl'
+                >
+                  LogOut
+                </button>
           </div>
       </aside>
     </div>

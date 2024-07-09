@@ -49,98 +49,98 @@ input::-webkit-inner-spin-button {
 }
 
 .card1 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  border-radius: 90px 5px 5px 90px;
+@apply bg-zinc-950;  border-radius: 90px 5px 5px 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 .card01 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
+@apply dark:bg-zinc-950 bg-zinc-200;  border-radius: 5px 5px 5px 5px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon1 {
-  @apply text-white;
+  @apply dark:text-white;
 }
 
 .card2 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  
+@apply bg-zinc-950;  
 border-radius: 5px 90px 90px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 .card02 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  border-radius: 5px 5px 5px 5px;
+@apply dark:bg-zinc-950 bg-zinc-200;  border-radius: 5px 5px 5px 5px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon2 {
-  @apply text-white;
+  @apply dark:text-white;
 }
 
 .card3 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  border-radius: 5px 5px 5px 90px;
+@apply dark:bg-zinc-950;  border-radius: 5px 5px 5px 90px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 .card03 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-  @apply bg-zinc-600;
+  @apply dark:bg-zinc-950 bg-zinc-200;
   border-radius: 5px 5px 5px 5px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon3 {
-  @apply text-white;
+  @apply dark:text-white;
 }
 
 .card4 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-@apply bg-zinc-600;  border-radius: 5px 5px 90px 5px;
+@apply bg-zinc-950;  border-radius: 5px 5px 90px 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 .card04 {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   outline: none;
   border: none;
-  @apply bg-zinc-600;
+  @apply dark:bg-zinc-950 bg-zinc-200;
   border-radius: 5px 5px 5px 5px;
   box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: .2s ease-in-out;
 }
 
 .icon4 {
-  @apply text-white;
+  @apply dark:text-white ;
 }
 
 .card1:hover {
@@ -151,7 +151,7 @@ border-radius: 5px 90px 90px 5px;
 .card01:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: rgb(79, 138, 79);
+  background-color: rgb(47, 48, 47);
 }
 
 .card01:hover .icon1 {
@@ -164,7 +164,7 @@ border-radius: 5px 90px 90px 5px;
 .card02:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: rgb(79, 138, 79);
+  background-color: rgb(47, 48, 47);
 }
 
 .card02:hover .icon2 {
@@ -192,7 +192,7 @@ border-radius: 5px 90px 90px 5px;
 .card03:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: rgb(79, 138, 79);
+  background-color: rgb(47, 48, 47);
 }
 
 .card03:hover .icon3 {
@@ -211,7 +211,7 @@ border-radius: 5px 90px 90px 5px;
 .card04:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: rgb(174, 62, 62);;
+  background-color: rgb(47, 48, 47);;
 }
 
 .card04:hover .icon4 {

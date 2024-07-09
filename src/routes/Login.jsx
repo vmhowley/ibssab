@@ -30,7 +30,7 @@ function Login () {
     initial={{ opacity: 0 }}
     animate={{ opacity: 2 }}
     exit={{ opacity: 0 }}
-     className="fixed top-0 xl:-left-80 w-screen flex h-screen flex-1 flex-col justify-center  dark:bg-[#202326] bg-white z-50">
+     className="fixed w-screen flex h-screen  flex-col justify-center inset-0 dark:bg-[#202326] bg-white ">
         <div className="sm:mx-auto sm:w-full pb-10 sm:max-w-sm">
           <img
             className="mx-auto h-14 w-auto"
@@ -51,7 +51,6 @@ function Login () {
                   id="username"
                   name="username"
                   type="text"
-                  autoComplete="username"
                   onChange={handleInput}
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"

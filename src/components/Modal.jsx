@@ -19,9 +19,8 @@ export default function Modal ({ open, setOpen, data, setData, send, setSend }) 
   }
 
   const fetchDat = async () => {
-    const encrypted = CryptoJS.AES.encrypt(data.tcact,'password')
-    setData({ ...data, tcact: encrypted.toString() })
-    const url = 'http://192.168.1.220:801/subagent/pagotc'
+
+    const url = 'http://192.168.1.220:5731/subagent/pagotc'
     const headers = new Headers()
     myHeaders.append('Content-Type', 'application/json')
 

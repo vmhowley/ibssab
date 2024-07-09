@@ -1,3 +1,5 @@
+import js from "@eslint/js";
+
 module.exports = {
   env: {
     browser: true,
@@ -28,6 +30,7 @@ module.exports = {
     'react'
   ],
   rules: {
+    "no-unused-vars": "warn",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
   }

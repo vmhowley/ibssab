@@ -6,7 +6,7 @@ function SquareButtons (props) {
 <div className="main hover:scale-95 transition-all duration-400  ">
   <div className="up justify-center ">
     <Link to={props.button1}>
-    <button className={`${props.class1 ? 'show' : 'hidden'} grid ${props.class1} place-content-center hover:scale-100 transition-all duration-200 `}>
+    <button className={`${props.class1 ? 'show' : 'hidden'} grid ${props.class1} place-content-center  transition-all duration-200 `}>
     <div
         width="20px"
         height="20px"
@@ -20,7 +20,7 @@ function SquareButtons (props) {
       </button>
         </Link>
         <Link to={props.button2}>
-    <button className={`${props.class2 ? 'show ' : 'hidden '} grid ${props.class2} place-content-center hover:scale-125 transition-all duration-200 `}>
+    <button className={`${props.class2 ? 'show ' : 'hidden '} grid ${props.class2} place-content-center   transition-all duration-200 `}>
       <div
         width="30px"
         height="30px"
@@ -36,7 +36,7 @@ function SquareButtons (props) {
   </div>
   <div className="down justify-center">
   <Link to={props.button3}>
-    <button className={`${props.class3 ? 'show' : 'hidden'} grid ${props.class3} place-content-center hover:scale-125 transition-all duration-200 `}>
+    <button className={`${props.class3 ? 'show' : 'hidden'} grid ${props.class3} place-content-center   transition-all duration-200 `}>
     <div
         width="30px"
         height="30px"
@@ -50,7 +50,7 @@ function SquareButtons (props) {
     </Link>
     <Link to={props.button4}>
 
-    <button className={`${props.class4 ? 'show' : 'hidden'} grid ${props.class4} place-content-center hover:scale-125 transition-all duration-200 `}>
+    <button className={`${props.class4 ? 'show' : 'hidden'} grid ${props.class4} place-content-center   transition-all duration-200 `}>
     <div
         width="30px"
         height="30px"
