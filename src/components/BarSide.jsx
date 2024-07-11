@@ -71,12 +71,12 @@ export const BarSide = () => {
             )}
         </ul>
           <div className='flex justify-center'>
-            <button onClick={darkModeHandler} className='absolute bottom-20 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl'>
+            <button onClick={darkModeHandler} className={`absolute bottom-20 bg-neutral-600 hover:bg-red-950 text-white flex w-max p-2 rounded-xl ${dark ? 'hover:bg-yellow-400/70' : 'hover:bg-blue-950'}`}>
                 {
-                  dark && <IoSunny />
+                  dark && <IoSunny color='yellow'/>
                   }
                 {
-                  !dark && <IoMoon />
+                  !dark && <IoMoon color='black'/>
                   }
             </button>
                 <button 

@@ -9,7 +9,7 @@ function OverView() {
         title:"Total revenue",
         amount:"2.6M",
         percent:"+4.5%",
-        class:"bg-lime-400/15 w-max text-sm p-1 rounded text-lime-300 font-medium",
+        class:"dark:bg-lime-400/15 bg-lime-400/30 w-max text-sm p-1 rounded dark:text-lime-300 text-lime-600 font-medium",
         subtitle:"from last week"
       },
         {
@@ -23,14 +23,14 @@ function OverView() {
         title:"Tickets sold",
         amount:"5,888",
         percent:"+4.5%",
-        class:"bg-lime-400/15 w-max text-sm p-1 rounded text-lime-300 font-medium",
+        class:"dark:bg-lime-400/15 bg-lime-400/30 w-max text-sm p-1 rounded dark:text-lime-300 text-lime-600 font-medium",
         subtitle:"from last week"
       },
         {
         title:"Pageviews",
         amount:"823,067",
         percent:"+21.2%",
-        class:"bg-lime-400/15 w-max text-sm p-1 rounded text-lime-300 font-medium",
+        class:"dark:bg-lime-400/15 bg-lime-400/30 w-max text-sm p-1 rounded dark:text-lime-300 text-lime-600 font-medium",
         subtitle:"from last week"
       },
     
@@ -42,7 +42,7 @@ function OverView() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className='flex '>
-          <div className='inset-0 mx-60 left-44 my-14 fixed text-white '>
+          <div className='inset-0 mx-60 left-44 my-14 fixed dark:text-white '>
             <div className='font-bold text-xl'>
             <h1>Bienvenido, {auth.user}</h1>
             </div>
@@ -57,7 +57,7 @@ function OverView() {
               <h1 className='font-bold text-2xl'>{item.amount}</h1>
               <div className='flex items-center gap-1'>
                 <p className={item.class}>{item.percent}</p>
-                <h1 className='text-xs text-zinc-300'>{item.subtitle}</h1>
+                <h1 className='text-xs dark:text-zinc-300'>{item.subtitle}</h1>
               </div>
               </div>
             )}

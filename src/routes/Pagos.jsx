@@ -10,10 +10,9 @@ import {
 function Pagos (props) {
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    className='flex justify-center items-center h-full'>
+    animate={{ x: 100, scale: 1}}
+    initial={{ scale: 0}}
+    className='relative right-24'>
      <SquareButtons class1='card01'
                     button1='/tc_payment'
                     button2='/loan_payment'
