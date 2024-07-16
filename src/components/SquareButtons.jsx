@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function SquareButtons (props) {
   return (
     <>
-<div className="main hover:scale-95 transition-all duration-400  ">
+<div className="main hover:scale-105 transition-all duration-400  ">
   <div className="up justify-center ">
     <Link to={props.button1}>
     <button className={`${props.class1 ? 'show' : 'hidden'} grid ${props.class1} place-content-center  transition-all duration-200 `}>
