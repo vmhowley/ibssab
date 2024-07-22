@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import Logo from '../assets/images/logo2.png'
 import { IoMoon, IoSunny } from 'react-icons/io5'
-import { useAuth } from '../components/AuthProvider'
+import { useAuth } from './AuthProvider'
 import { MdDashboard } from "react-icons/md";
 
 import { Handbag, Scroll, SquaresFour, HandCoins } from '@phosphor-icons/react'
@@ -50,7 +50,7 @@ export const BarSide = () => {
     <div className='fixed inset-y-0 flex-wrap items-center block  w-[290px] overflow-y-auto antialiased transition-transform duration-500 -translate-x-full dark:shadow-white/5  my-3 ease-nav-brand -z-1  xl:left-0 xl:translate-x-0 ps z-auto'>
       <aside className='  '>
           <div onClick={() => navi('/')} className='grid cursor-pointer p-2 justify-center '>
-          <img src={Logo} alt="" className='w-52 drop-shadow' />
+          <img src={Logo} alt="" className='w-52 drop-shadow dark:invert' />
           <hr className="inset-0 dark:border-zinc-500  mt-5" />
         </div>
           <ul className='grid  text-sm transition-all mt-5 duration-300  gap-2 justify-start w-full'>

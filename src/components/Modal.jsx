@@ -22,7 +22,7 @@ export default function Modal ({ open, setOpen, data, setData, send, setSend }) 
   
   const errorToast = (e) => {
     toast.error(e)
-    //setTimeout(reset, 3200)
+    setTimeout(reset, 3200)
   }
 
   function reset () {

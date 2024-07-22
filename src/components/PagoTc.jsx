@@ -4,6 +4,7 @@ import ChildModal from './ChildModal'
 import { motion } from 'framer-motion'
 import CurrencyInput from 'react-currency-input-field'
 import { useAuth } from './AuthProvider'
+import { Button } from '@mui/material'
 import DrFlag from '../assets/images/dr-flag.png'
 function PagoTc(props) {
   const auth = useAuth()
@@ -28,7 +29,7 @@ function PagoTc(props) {
     numero_ck: '0',
     forma_pago: '1',
     descripcion: '0',
-    Referencia: '20240216091401000000001',
+    Referencia: '1252354125',
     autorizacion: '0',
     usuario: auth.user,
     success: '',
@@ -444,12 +445,14 @@ function PagoTc(props) {
               <p className='text-red-500'>{errors.autorizacion}</p>
             </div>
             <div className='grid justify-center gap-2  pt-5'>
-              <button
+              <Button
+                color='secondary'
+                variant='contained'
                 type='submit'
                 value='submit'
-                className='h-10 w-32 font-semibold rounded-xl p-4 place-content-center grid dark:bg-zinc-600 border hover:bg-blue-500 '
+                className=' font-semibold rounded-xl p-4 place-content-center grid bg-black dark:bg-zinc-600 border hover:bg-blue-500 '
               >Pagar
-              </button>
+              </Button>
 
             </div>
           </div>

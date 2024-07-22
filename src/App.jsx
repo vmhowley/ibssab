@@ -21,15 +21,17 @@ import Copy from './assets/images/logo.png'
 
 function App (isVisible) {
   return (
-    <div className='grid fixed place-content-center right-0 left-72  dark:bg-zinc-900 dark:border dark:border-white/10 bg-white shadow inset-0 my-2 mx-2 rounded-xl  '>
+    <div className='grid fixed place-content-center right-0 left-72  dark:bg-zinc-900   bg-white shadow inset-0 my-2 mx-2 rounded-xl  '>
       <AnimatePresence>
         <Router>
+          <div className={`${location.pathname === '/home' ? 'hidden' : 'show'}`}>
+          </div>
           <AuthProvider>
               <BarSide />
-              <div className='fixed right-5 p-5  pb-0 bottom-5 border rounded-lg gap-2 grid opacity-80  animate-shake'>
+              <div className='fixed right-5 p-5  pb-0 bottom-5  rounded-lg gap-2 grid opacity-80 animate-shake dark:invert'>
             {/* CopyRights */}
-            <img src={Copy} alt="" className='w-44' />
-            <p className='flex text-xs justify-end items-end content-end'>CopyRight 2024 - 2050</p>
+            <img src={Copy} alt="" className='w-52' />
+            <p className='flex text-xs justify-end items-end content-end'>Version de Prueba</p>
           </div>
             <Routes location={location} key={location.path}>
               <Route path='/login' element={<Login />} />
