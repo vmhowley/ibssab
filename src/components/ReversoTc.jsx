@@ -13,19 +13,19 @@ function ReversoTc (props) {
   const [submit, setSubmit] = useState(false)
 
   const [data, setData] = useState({
-    tipo_trans: 'Reversotc',
+    tipo_trans: 'ReversoPagotc',
     cod_afiliado: '1',
     tcact: '',
     moneda: '214',
-    cvv2: '0',
+    cvv2: '',
     expd: '0',
     merty: '123',
     monto: '0',
     numero_ck: '0',
     forma_reverso: '1',
-    descripcion: 'Prueba de Parceo',
-    Referencia: '20240216091401000000001',
-    autorizacion: '',
+    descripcion: ' ',
+    Referencia: '0',
+    autorizacion: '0',
     usuario: auth.user,
     success: '',
     errcod: '',
@@ -229,14 +229,14 @@ function ReversoTc (props) {
             >
               <div className='mt-2'>
                 <label htmlFor='autorizacion' className='font-semibold'>
-                  Numero de autorización
+                  Numero de Referencia
                 </label>
                 <input
                   value={data.autorizacion ?? ''}
                   onChange={handleChange}
                   type='text'
-                  name='autorizacion'
-                  id='autorizacion'
+                  name='referencia'
+                  id='referencia'
                   autoComplete='autorizacion'
                   className='block w-full rounded-md border-0 py-1.5 text-slate-600  shadow-sm  placeholder:text-gray-500 font-bold  sm:text-sm sm:leading-6 ps-3'
                 />

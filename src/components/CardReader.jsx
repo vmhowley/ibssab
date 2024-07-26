@@ -33,7 +33,7 @@ function CardReader() {
   return (
     <div>
         <form onSubmit={''} >
-        <label htmlFor="">Numero de tarjeta  </label>
+        <label htmlFor="cardData">Numero de tarjeta  </label>
         <input name='cardData' id='cardData' onChange={handleChange} type="text" />
         <textarea name="" id="cardnumber"></textarea>
         </form>

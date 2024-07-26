@@ -200,6 +200,8 @@ function PagoTc(props) {
         setData={setData}
         send={send}
         setSend={setSend}
+        monedDesc={monedDesc}
+        setMonedDesc={setMonedDesc}
       />
       {Object.keys(errors).length === 0 && submit ? (
         <Modal
@@ -213,7 +215,7 @@ function PagoTc(props) {
       ) : null}
       <motion.div
         animate={{ x: 100, scale: 1 }}
-        className='dark:bg-zinc-800 bg-gray-100 border rounded-xl dark:text-white  shadow-md relative right-24 '
+        className='dark:bg-zinc-800 bg-gray-100/70 border rounded-xl dark:text-white  shadow-md relative right-24 '
       >
         <form id='formu' onSubmit={handleSubmit} className='flex p-10'>
           <div className='grid  gap-y-8 text-sm  sm:col-span-1  '>
@@ -244,11 +246,11 @@ function PagoTc(props) {
             <div className='sm:col-span-1 '>
               
               <div className='mt-2 grid gap-2 '>
-                <label htmlFor='Moneda' className='font-semibold'>
+                <label htmlFor='moneda' className='font-semibold'>
                   Moneda
                 </label>
                 <button
-                  id='states-button'
+                  id='moneda'
                   onClick={() => {
                     !moned ? setMoned(true) : setMoned(false)
                   }}
@@ -279,7 +281,7 @@ function PagoTc(props) {
                 </button>
 
                 <div
-                  id='dropdown-states'
+                  id='moneda'
                   className={`z-10 relative  bg-white divide-y divide-gray-100 transition ease-in-out delay-150 rounded-lg shadow  dark:bg-gray-700 ${
                     moned ? 'show' : 'hidden'
                   }`}

@@ -2,10 +2,15 @@ import React, { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { useReactToPrint } from 'react-to-print'
 
-export default function Modal ({ open, setOpen, data, setData, send, setSend }) {
+export default function Modal ({ open, setOpen, data, setData, send, setSend, monedDesc }) {
   const cancelButtonRef = useRef(null)
   const componentRef = useRef()
-
+  const date = new Date();
+  const day = date.getDate();
+  const moth = date.getMonth();
+  const year = date.getFullYear();
+  const fecha = moth.length !== 2 ? '0' + moth +'/' + day +'/' +year : moth +'/' + day +'/' +year
+  console.log(fecha)
   const handleModal = (e) => {
     if (e === 'print') {
       setSend(true)
@@ -19,7 +24,9 @@ export default function Modal ({ open, setOpen, data, setData, send, setSend }) 
     }
   }
   const tc = data.tcact
+  const data1 = JSON.stringify(data)
   const substr = JSON.stringify(tc).substring(12)
+  console.log('aki', data.Moneda)
 
   const USDollar = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -93,36 +100,24 @@ export default function Modal ({ open, setOpen, data, setData, send, setSend }) 
               Recibo de pago
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
-              Autorizacion #{data.autorizacion}
+              Referencia #{data.referencia}
             </p>
           </div>
           {/* Grid */}
           <div className="mt-5 sm:mt-10 grid grid-cols-2 sm:grid-cols-3 gap-5">
             <div>
-              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Monto:</span>
-              <span className="block text-sm font-medium text-gray-800 dark:text-neutral-200">{USDollar.format(data.monto)}</span>
+              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Fecha:</span>
+              <span className="block text-sm font-medium text-gray-800 dark:text-neutral-200">{fecha}</span>
             </div>
             {/* End Col */}
             <div>
-              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Date paid:</span>
-              <span className="block text-sm font-medium text-gray-800 dark:text-neutral-200">April 22, 2020</span>
+              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Moneda:</span>
+              <span className="block text-sm font-medium text-gray-800 dark:text-neutral-200">{(monedDesc)}</span>
             </div>
             {/* End Col */}
             <div>
-              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Payment method:</span>
-              <div className="flex items-center gap-x-2">
-                <svg className="size-5" width={400} height={248} viewBox="0 0 400 248" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clipPath="url(#clip0)">
-                    <path d="M254 220.8H146V26.4H254V220.8Z" fill="#FF5F00" />
-                    <path d="M152.8 123.6C152.8 84.2 171.2 49 200 26.4C178.2 9.2 151.4 0 123.6 0C55.4 0 0 55.4 0 123.6C0 191.8 55.4 247.2 123.6 247.2C151.4 247.2 178.2 238 200 220.8C171.2 198.2 152.8 163 152.8 123.6Z" fill="#EB001B" />
-                    <path d="M400 123.6C400 191.8 344.6 247.2 276.4 247.2C248.6 247.2 221.8 238 200 220.8C228.8 198.2 247.2 163 247.2 123.6C247.2 84.2 228.8 49 200 26.4C221.8 9.2 248.6 0 276.4 0C344.6 0 400 55.4 400 123.6Z" fill="#F79E1B" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0">
-                      <rect width={400} height="247.2" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+              <span className="block text-xs uppercase text-gray-500 dark:text-neutral-500">Terminal tarjeta:</span>
+              <div className="flex items-center gap-x-2 justify-center">
                 <span className="block text-sm font-medium text-gray-800 dark:text-neutral-200">●●●● {substr}</span>
               </div>
             </div>
@@ -147,7 +142,7 @@ export default function Modal ({ open, setOpen, data, setData, send, setSend }) 
               <li className="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-semibold bg-gray-50 border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-200">
                 <div className="flex items-center justify-between w-full">
                   <span>Amount paid</span>
-                  <span>$316.8</span>
+                  <span>{USDollar.format(data.monto)}</span>
                 </div>
               </li>
             </ul>
